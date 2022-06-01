@@ -14,10 +14,9 @@ public class DinoRegular extends Dino  {
         }
 
         for(int n = 1; n <= 3; n++) {
-            if( getdrx() >= getclx(n)   &&  // dino right cactus left
-                getdrx() <= getcrx(n)   &&  // dino right cactus right
-                getdby() >= getcty(n) + (getcty(n) - getcby(n))/2 &&  // dino bottom cactus top
-                getdby() <= getcby(n) )     // dino bottom cactus bottom
+            if( getdrx() >= getclx(n) &&  // dino right cactus left
+                getdrx() <= getcrx(n) &&  // dino right cactus right
+                getdby() >= getcty(n) + (getcby(n) - getcty(n))/2 )  // dino bottom cactus top
                 return true;
         }
         return false;
