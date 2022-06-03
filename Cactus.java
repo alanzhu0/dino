@@ -1,11 +1,5 @@
 import java.awt.*;
 import java.awt.image.*;
-/*
-import javax.swing.*;
-import javax.imageio.ImageIO;
-import java.io.File;
-import java.io.IOException; 
-*/
 
 public class Cactus {
     private int x, y, width, height, moveX;

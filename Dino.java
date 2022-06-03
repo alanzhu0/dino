@@ -1,11 +1,5 @@
 import java.awt.*;
 import java.awt.image.*;
-/*
-import javax.swing.*;
-import javax.imageio.ImageIO;
-import java.io.File;
-import java.io.IOException; 
-*/
 
 public abstract class Dino {
     private int x, y, width, height, jumpSeconds, moveY;
@@ -93,5 +87,6 @@ public abstract class Dino {
     public abstract void draw(Graphics g);
     public abstract boolean dead();
     public abstract int jumpEquation(int x);
+    public abstract String getType();
 
 } // public abstract class Dino 
