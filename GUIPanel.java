@@ -4,16 +4,17 @@ import java.awt.event.*;
 import java.io.IOException;
 
 public class GUIPanel extends JPanel {
-   GamePanel gfx;
+   private GamePanel gfx;
+
    public GUIPanel() throws IOException {
       setLayout(new BorderLayout());
       // Center
          gfx = new GamePanel();
          add(gfx);
 
-      // North }
-      // East  } Nothing
-      // West  }
+      // North \
+      // East   -> Nothing
+      // West  /
 
       // South
       JPanel south = new JPanel();
