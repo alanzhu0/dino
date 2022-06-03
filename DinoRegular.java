@@ -16,7 +16,7 @@ public class DinoRegular extends Dino  {
         for(int n = 1; n <= 3; n++) {
             if( getdrx() >= getclx(n) &&  // dino right cactus left
                 getdrx() <= getcrx(n) &&  // dino right cactus right
-                getdby() >= getcty(n) + (getcby(n) - getcty(n))/2 )  // dino bottom cactus top
+                getdby() >= getcty(n) )   // dino bottom cactus top
                 return true;
         }
         return false;
@@ -26,6 +26,9 @@ public class DinoRegular extends Dino  {
         return (int)( -0.3*x*( x - getJumpSeconds()) );
     }
 
+    public String getType() {
+        return "DinoRegular";
+    }
     public void draw(Graphics g){
         Image resizedImage = image.getScaledInstance(getWidth(), getHeight(), Image.SCALE_DEFAULT);
         g.drawImage(resizedImage, getX(), getY(), null );

@@ -16,10 +16,10 @@ public class DinoSuper extends Dino  {
         }
 
         for(int n = 1; n <= 3; n++) {
-            if( getdrx() >= getclx(n)   &&  // dino right cactus left
-                getdrx() <= getcrx(n)   &&  // dino right cactus right
-                getdby() >= getcty(n) + (getcty(n) - getcby(n))/2 &&  // dino bottom cactus top
-                getdby() <= getcby(n) )     // dino bottom cactus bottom
+            if( getdrx() >= getclx(n)  &&  // dino right cactus left
+                getdrx() <= getcrx(n)  &&  // dino right cactus right
+                getdby() >= getcty(n)  &&  // dino bottom cactus top
+                getdby() <= getcby(n) )    // dino bottom cactus bottom
                 lives --;
         }
 
@@ -33,7 +33,9 @@ public class DinoSuper extends Dino  {
     public int jumpEquation(int x) {
         return (int)( -0.3*x*( x - getJumpSeconds()) );
     }
-
+    public String getType() {
+        return "DinoSuper";
+    }
     public void draw(Graphics g){
         Image resizedImage = image.getScaledInstance(getWidth(), getHeight(), Image.SCALE_DEFAULT);
         g.drawImage(resizedImage, getX(), getY(), null );
